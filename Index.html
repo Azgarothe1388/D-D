@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donjon & Trésor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="character-creation">
+            <h1>Création de personnage</h1>
+            <form id="creation-form">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="class">Classe :</label>
+                <select id="class" name="class" required>
+                    <option value="guerrier">Guerrier</option>
+                    <option value="mage">Mage</option>
+                    <option value="archer">Archer</option>
+                </select>
+
+                <button type="submit">Commencer l'aventure</button>
+            </form>
+        </div>
+
+        <div id="gameplay" style="display: none;">
+            <h1>Donjon & Trésor</h1>
+            <div id="info">
+                <p id="player-info"></p>
+                <p id="status">Vous êtes dans le donjon.</p>
+            </div>
+
+            <div id="actions">
+                <button id="advance">Avancer</button>
+                <button id="attack" disabled>Attaquer</button>
+                <button id="flee" disabled>Fuir</button>
+                <button id="use-potion" disabled>Utiliser Potion</button>
+                <button id="useSpecialAttack" disabled>Attaque Spéciale</button>
+            </div>
+
+            <div id="log"></div>
+            <div id="inventory">
+                <h2>Inventaire</h2>
+                <ul id="inventory-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
